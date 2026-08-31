@@ -15,7 +15,7 @@ fi
 cd "${REPO_ROOT}"
 export PYTHONPATH="${REPO_ROOT}:${PYTHONPATH:-}"
 
-DEFAULT_DATA_PREFIX="${DEFAULT_DATA_PREFIX:-/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document}"
+DEFAULT_DATA_PREFIX="${DEFAULT_DATA_PREFIX:-${REPO_ROOT}/datasets/openwebtext_gpt2/bpe_openwebtext}"
 RAW_JSONL="${RAW_JSONL:-}"
 OUTPUT_PREFIX="${OUTPUT_PREFIX:-${REPO_ROOT}/datasets/openwebtext_gpt2/bpe_openwebtext}"
 JSON_KEYS="${JSON_KEYS:-text}"

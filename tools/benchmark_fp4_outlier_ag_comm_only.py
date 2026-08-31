@@ -14,13 +14,9 @@ import torch.distributed as dist
 
 os.environ.setdefault("NVTE_CUSTOM_NVFP4_SPARSE_AG_PACKED_FASTPATH", "1")
 
-COLLECTED_PY = Path(
-    "/workspace/Megatron-LM-312/collected/nvfp4_sparse_comm_schedules/python"
-)
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATASET = Path(
-    "/workspace/Megatron-LM-312/test_tb/real_fprop_dump_llama3_8b_steps_1_500_1000"
-)
+COLLECTED_PY = REPO_ROOT / "collected/nvfp4_sparse_comm_schedules/python"
+DEFAULT_DATASET = REPO_ROOT / "test_tb/real_fprop_dump_llama3_8b_steps_1_500_1000"
 DEFAULT_OUT_PREFIX = REPO_ROOT / "logs" / "fp4_outlier_ag_comm_only"
 
 if str(COLLECTED_PY) not in sys.path:

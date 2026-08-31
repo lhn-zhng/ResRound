@@ -94,5 +94,5 @@ repository; these directories are ignored by Git.
 ## License and upstream
 
 This repository retains the upstream Megatron-LM Apache-2.0 license and its
-copyright notices. The ResRound changes are distributed under the same
-repository license unless a file states otherwise.
+copyright notices. Before making the repository public, the authors should
+confirm the license that applies to newly added ResRound-specific files.

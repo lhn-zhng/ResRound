@@ -134,12 +134,16 @@ class ShardWriter:
 
 def get_args():
     parser = argparse.ArgumentParser(description="Stream FineWeb-Edu into Megatron indexed shards.")
-    parser.add_argument("--output-root", type=Path, default=Path("/home/fineweb_edu_llama3_38b"))
+    parser.add_argument(
+        "--output-root", type=Path, default=REPO_ROOT / "datasets/fineweb_edu_llama3_38b"
+    )
     parser.add_argument("--dataset-name", default="HuggingFaceFW/fineweb-edu")
     parser.add_argument("--dataset-config", default="sample-100BT")
     parser.add_argument("--split", default="train")
     parser.add_argument("--text-field", default="text")
-    parser.add_argument("--tokenizer-model", default="/share/models/Llama-3.1-8B-Instruct")
+    parser.add_argument(
+        "--tokenizer-model", default=str(REPO_ROOT / "tokenizers/Llama-3.1-8B-Instruct")
+    )
     parser.add_argument("--target-tokens", type=parse_int, default=38_000_000_000)
     parser.add_argument("--shard-tokens", type=parse_int, default=500_000_000)
     parser.add_argument("--batch-size", type=int, default=512)

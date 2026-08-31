@@ -44,8 +44,8 @@ WANDB_PROJECT="${WANDB_PROJECT:-megatron_fp4_paper_repro_train_quartet_c4_100m}"
 LOG_DIR="${LOG_DIR:-${REPO_ROOT}/logs}"
 TENSORBOARD_DIR="${TENSORBOARD_DIR:-${REPO_ROOT}/tensorboard_logs/fp4_paper_matrix/${RUN_NAME}}"
 DATA_CACHE_PATH="${DATA_CACHE_PATH:-${REPO_ROOT}/benchmark_cache_fp4_paper_matrix}"
-DATA_PATH="${DATA_PATH:-/share/datasets/enwiki_openwebtext_llama3/merge}"
-TOKENIZER_MODEL="${TOKENIZER_MODEL:-/share/models/Llama-3.1-8B-Instruct}"
+DATA_PATH="${DATA_PATH:-${REPO_ROOT}/datasets/enwiki_openwebtext_llama3/merge}"
+TOKENIZER_MODEL="${TOKENIZER_MODEL:-${REPO_ROOT}/tokenizers/Llama-3.1-8B-Instruct}"
 MASTER_PORT="${MASTER_PORT:-6421}"
 
 FP4_ARGS=(--fp4-format e2m1)

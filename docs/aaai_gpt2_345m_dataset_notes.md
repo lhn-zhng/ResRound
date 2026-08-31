@@ -18,17 +18,17 @@ This is usually referred to as 345M or 355M depending on counting convention.
 The GPT-2 paper trained on WebText. Since WebText itself was not released,
 OpenWebText is the standard open reproduction for GPT-2-style runs.
 
-Ready local Megatron indexed prefix:
+Example Megatron indexed prefix:
 
 ```bash
-/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document
+/path/to/openwebtext_prefix
 ```
 
-Files present:
+Required files:
 
 ```bash
-/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document.bin
-/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document.idx
+/path/to/openwebtext_prefix.bin
+/path/to/openwebtext_prefix.idx
 ```
 
 ## Scripts
@@ -36,7 +36,7 @@ Files present:
 Training:
 
 ```bash
-cd /workspace/Megatron-LM-312-fprop-input
+cd /path/to/ResRound
 RUN_VARIANTS=bf16,te_nvfp4,ours0p1 \
 bash examples/fp4_paper_repro/train_gpt2_345m_openwebtext.sh
 ```
@@ -44,14 +44,14 @@ bash examples/fp4_paper_repro/train_gpt2_345m_openwebtext.sh
 Dry run:
 
 ```bash
-cd /workspace/Megatron-LM-312-fprop-input
+cd /path/to/ResRound
 DRY_RUN=1 bash examples/fp4_paper_repro/train_gpt2_345m_openwebtext.sh
 ```
 
 Data check or preprocessing:
 
 ```bash
-cd /workspace/Megatron-LM-312-fprop-input
+cd /path/to/ResRound
 bash examples/fp4_paper_repro/prepare_gpt2_openwebtext_data.sh
 ```
 
@@ -71,7 +71,7 @@ parameter. For the 1.9B model this is 38B tokens.
 The old local reproduction script matches this budget:
 
 ```bash
-/workspace/Megatron-LM-312/examples/fp4_paper_repro/train_quartet_nanochat_1p9b.sh
+bash examples/fp4_paper_repro/train_quartet_nanochat_1p9b.sh
 ```
 
 with:

@@ -26,15 +26,11 @@ export WANDB_INIT_TIMEOUT=${WANDB_INIT_TIMEOUT:-300}
 
 CHECKPOINT_PATH=${CHECKPOINT_PATH:-"checkpoints/llama3_8b_fprop_input_outlier_r003_ag"}
 TENSORBOARD_LOGS_PATH=${TENSORBOARD_LOGS_PATH:-"tensorboard_logs/llama3_8b_fprop_input_outlier_r003_ag"}
-DEFAULT_TOKENIZER_ARG="/share/models/qwen3-8b"
+DEFAULT_TOKENIZER_ARG="${REPO_ROOT}/tokenizers/qwen3-8b"
 DEFAULT_DATA_ARG="${REPO_ROOT}/datasets/llama3/merge"
 if [[ ! -f "${DEFAULT_DATA_ARG}.idx" || ! -f "${DEFAULT_DATA_ARG}.bin" ]]; then
-    if [[ -f "/workspace/Megatron-LM-312/datasets/llama3/merge.idx" && -f "/workspace/Megatron-LM-312/datasets/llama3/merge.bin" ]]; then
-        DEFAULT_DATA_ARG="/workspace/Megatron-LM-312/datasets/llama3/merge"
-    else
-        DEFAULT_DATA_ARG="MOCK"
-        DEFAULT_TOKENIZER_ARG="MOCK"
-    fi
+    DEFAULT_DATA_ARG="MOCK"
+    DEFAULT_TOKENIZER_ARG="MOCK"
 fi
 TOKENIZER_ARG=${TOKENIZER_ARG:-"${DEFAULT_TOKENIZER_ARG}"}
 DATA_ARG=${DATA_ARG:-"${DEFAULT_DATA_ARG}"}

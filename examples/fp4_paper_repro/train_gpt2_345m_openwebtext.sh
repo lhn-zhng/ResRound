@@ -87,7 +87,7 @@ TENSORBOARD_DIR="${TENSORBOARD_DIR:-${REPO_ROOT}/tensorboard_logs/fp4_paper_repr
 DATA_CACHE_PATH="${DATA_CACHE_PATH:-${REPO_ROOT}/benchmark_cache_fp4_paper_repro/${MODEL_NAME}}"
 mkdir -p "${LOG_DIR}" "${CHECKPOINT_DIR}" "${TENSORBOARD_DIR}" "${DATA_CACHE_PATH}" "${LOG_DIR}/wandb_fp4"
 
-DATA_PATH="${DATA_PATH:-/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document}"
+DATA_PATH="${DATA_PATH:-${REPO_ROOT}/datasets/openwebtext_gpt2/bpe_openwebtext}"
 ALLOW_MOCK_DATA="${ALLOW_MOCK_DATA:-0}"
 
 TOKENIZER_TYPE="${TOKENIZER_TYPE:-HuggingFaceTokenizer}"

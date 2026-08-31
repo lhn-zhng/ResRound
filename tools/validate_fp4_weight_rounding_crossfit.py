@@ -63,7 +63,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--data-path",
-        default="/share/datasets/pretrain/openwebtext/gpt2/bpe_openwebtext_text_document",
+        default=str(REPO_ROOT / "datasets/openwebtext_gpt2/bpe_openwebtext"),
     )
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--trials", type=int, default=3)

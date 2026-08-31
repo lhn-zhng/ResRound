@@ -15,16 +15,10 @@ import transformer_engine.pytorch as te
 from transformer_engine.common.recipe import CustomRecipe, NVFP4BlockScaling
 
 
-COLLECTED_PY = Path(
-    "/workspace/Megatron-LM-312/collected/nvfp4_sparse_comm_schedules/python"
-)
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATASET = Path(
-    "/workspace/Megatron-LM-312/test_tb/real_fprop_dump_llama3_8b_steps_1_500_1000"
-)
-DEFAULT_OUT_PREFIX = Path(
-    "/workspace/Megatron-LM-312-fprop-input/logs/single_layer_fp4_outlier_module"
-)
+COLLECTED_PY = REPO_ROOT / "collected/nvfp4_sparse_comm_schedules/python"
+DEFAULT_DATASET = REPO_ROOT / "test_tb/real_fprop_dump_llama3_8b_steps_1_500_1000"
+DEFAULT_OUT_PREFIX = REPO_ROOT / "logs/single_layer_fp4_outlier_module"
 
 if str(COLLECTED_PY) not in sys.path:
     sys.path.insert(0, str(COLLECTED_PY))

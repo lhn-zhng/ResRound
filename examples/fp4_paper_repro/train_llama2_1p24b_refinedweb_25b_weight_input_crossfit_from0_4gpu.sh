@@ -50,8 +50,8 @@ export NORM_EPSILON="${NORM_EPSILON:-1e-5}"
 export VOCAB_SIZE="${VOCAB_SIZE:-32000}"
 export MAKE_VOCAB_SIZE_DIVISIBLE_BY="${MAKE_VOCAB_SIZE_DIVISIBLE_BY:-128}"
 
-export DATA_PATH="${DATA_PATH:-/share/datasets/pretrain/refinedweb/tmp/jetmoe_refinedweb_content_document}"
-export TOKENIZER_MODEL="${TOKENIZER_MODEL:-/share/models/pretrain/jetmoe-8b}"
+export DATA_PATH="${DATA_PATH:-${REPO_ROOT}/datasets/refinedweb/jetmoe_refinedweb_content_document}"
+export TOKENIZER_MODEL="${TOKENIZER_MODEL:-${REPO_ROOT}/tokenizers/jetmoe-8b}"
 export REQUIRE_FINEWEB_COMPLETE=0
 export DATA_CACHE_PATH="${DATA_CACHE_PATH:-${SOURCE_RUN_ROOT}/cache}"
 
