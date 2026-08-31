@@ -1,0 +1,14 @@
+configs:
+  nvfp4_fprop_input_outlier:
+    transformer_engine_config_type: "TEQuantizationParams"
+    training_recipe:
+      fp4_quantization_recipe: "custom"
+      custom_recipe_factory: "megatron.core.extensions.fp4_outlier_recipe.nvfp4_outlier_quantizer_factory"
+    evaluation_recipe: {}
+
+matchers:
+  linear_nvfp4_fprop_input_outlier:
+    config: "nvfp4_fprop_input_outlier"
+    type: "glob"
+    pattern: "*.linear_*"
+    enabled: true

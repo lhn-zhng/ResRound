@@ -1,0 +1,7 @@
+src/build*/
+python/__pycache__/
+profile/
+*.o
+*.so
+*.ncu-rep
+.nfs*
