@@ -3,10 +3,7 @@
 Reference implementation for **ResRound: Improving Native NVFP4 Training via
 Sparse Activation Residuals and Activation-Aware Weight Rounding**.
 
-**Authors:** [LuHan Zhang](https://openreview.net/profile?id=~LuHan_Zhang1),
-[Xinrui Yang](https://openreview.net/profile?id=~Xinrui_Yang5), and
-[Shaohuai Shi](https://openreview.net/profile?id=~Shaohuai_Shi1) (corresponding
-author).
+**Authors:** [LuHan Zhang](https://openreview.net/profile?id=~LuHan_Zhang1), [Xinrui Yang](https://openreview.net/profile?id=~Xinrui_Yang5), [Shaohuai Shi](https://openreview.net/profile?id=~Shaohuai_Shi1).
 
 ## Overview
 
